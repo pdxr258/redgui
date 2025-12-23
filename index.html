@@ -173,9 +173,9 @@
     <script type="importmap">
         {
             "imports": {
-                "three": "./assets/three/three.module.js",
-                "three/addons/": "./assets/three/examples/",
-                "@mediapipe/tasks-vision": "./assets/mediapipe/vision_bundle.mjs"
+                "three": "/assets/three/three.module.js",
+                "three/addons/": "/assets/three/examples/",
+                "@mediapipe/tasks-vision": "/assets/mediapipe/vision_bundle.mjs"
             }
         }
     </script>
@@ -694,12 +694,12 @@
 
             try {
                 // Local WASM check
-                const wasmUrl = "./assets/mediapipe/wasm";
+                const wasmUrl = "/assets/mediapipe/wasm";
                 
                 const vision = await FilesetResolver.forVisionTasks(wasmUrl);
                 
                 // Local Model
-                const MODEL_URL = "./assets/mediapipe/hand_landmarker.task";
+                const MODEL_URL = "/assets/mediapipe/hand_landmarker.task";
 
                 handLandmarker = await HandLandmarker.createFromOptions(vision, {
                     baseOptions: {
